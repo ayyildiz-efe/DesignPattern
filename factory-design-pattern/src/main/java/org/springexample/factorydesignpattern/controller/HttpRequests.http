@@ -1,0 +1,8 @@
+### GET request to example server
+GET http://localhost:8080/sendNotification?type=EMAIL&message=Hello-Email
+
+###
+GET http://localhost:8080/sendNotification?type=SMS&message=Hello-SMS
+
+###
+GET http://localhost:8080/sendNotification?type=PUSH&message=Hello-PUSH
