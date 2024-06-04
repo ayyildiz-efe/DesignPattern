@@ -1,11 +1,11 @@
 package org.springexample.factorydesignpattern.controller;
 
+import org.springexample.factorydesignpattern.dto.NotificationRequest;
 import org.springexample.factorydesignpattern.model.Notification;
 import org.springexample.factorydesignpattern.model.NotificationType;
 import org.springexample.factorydesignpattern.service.NotificationFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class NotificationController {
@@ -15,10 +15,10 @@ public class NotificationController {
         this.notificationFactory = notificationFactory;
     }
 
-    @GetMapping("/sendNotification")
-    public String sendNotification(@RequestParam NotificationType type, @RequestParam String message) {
-        Notification notification = notificationFactory.createNotification(type);
-        return notification.send(message) + " Notification sent successfully";
+    @PostMapping("/sendNotification")
+    public ResponseEntity sendNotification(@RequestBody NotificationRequest request) {
+        Notification notification = notificationFactory.createNotification(request.notificationtype());
+        return ResponseEntity.ok(notification.send(request.message()));
     }
 
 }

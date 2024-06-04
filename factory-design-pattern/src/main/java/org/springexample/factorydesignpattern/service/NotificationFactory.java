@@ -5,13 +5,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NotificationFactory {
-    public Notification createNotification(NotificationType type) {
+    public Notification createNotification(String type) {
         switch (type) {
-            case EMAIL:
+            case "EMAIL":
                 return new EmailNotification();
-            case SMS:
+            case "SMS":
                     return new SmsNotification();
-            case PUSH:
+            case "PUSH":
                 return new PushNotification();
             default:
                 throw new IllegalArgumentException("Unknown notification type : " + type);
