@@ -5,19 +5,20 @@ Design patterns represent the best practices used by experienced object-oriented
 ## What Are Design Patterns?
 
 Design patterns are typical solutions to common problems in software design. They are like blueprints that can be customized to solve a particular design problem in your code. Design patterns are divided into three main categories:
-1. **Creational Patterns**: Deal with object creation mechanisms.
-2. **Structural Patterns**: Deal with object composition and typically identify simple ways to realize relationships between different objects.
-3. **Behavioral Patterns**: Deal with object collaboration and the delegation of responsibilities.
+1. **Creational Patterns**: These patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
+2. **Structural Patterns**: These patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
+3. **Behavioral Patterns**: These patterns are concerned with algorithms and the assignment of responsibilities between objects.
 
 ![Design Patterns](images/typesOfDesignPatterns.png)
 
 
-## Why Use Design Patterns?
+## Why do we need Design Patterns?
 
 - **Reusable Solutions**: Provide a proven solution to common problems.
 - **Readability and Maintenance**: Improve the readability and maintenance of the code.
 - **Development Efficiency**: Enhance development speed and efficiency by providing standard approaches to common problems.
 - **Best Practices**: Encourage best practices and provide a shared vocabulary for developers.
+- **<span style="color:red">Open-Closed Principle</span>**: There are some princiles called SOLID. Open-Closed says that <span style="color:red">**open for extension but closed for modification.**</span> For example if you want to add new type for payment mode or notification type, You have to change all java code from where used in code. But if you use design pattern, You can add new type easily.
 
 ## Factory Design Pattern
 
