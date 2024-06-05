@@ -1,0 +1,40 @@
+### POST Request for payment with Paypal
+POST http://localhost:8080/processPayment
+Content-Type: application/json
+
+{
+  "paymentProvider": "PAYPAL",
+  "paymentMethod": "CREDIT_CARD",
+  "amount": "100.00"
+}
+
+
+### POST Request for payment with Stripe
+POST http://localhost:8080/processPayment
+Content-Type: application/json
+
+{
+  "paymentProvider": "stripe",
+  "paymentMethod": "CREDIT_CARD",
+  "amount": "50.00"
+}
+
+### POST Request for payment with Square
+POST http://localhost:8080/processPayment
+Content-Type: application/json
+
+{
+  "paymentProvider": "square",
+  "paymentMethod": "WALLET",
+  "amount": "80.00"
+}
+
+### POST Request for payment with different payment Provider
+POST http://localhost:8080/processPayment
+Content-Type: application/json
+
+{
+  "paymentProvider": "BLABLA",
+  "paymentMethod": "",
+  "amount": "80.00"
+}
